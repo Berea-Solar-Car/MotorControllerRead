@@ -269,7 +269,7 @@ int main(void)
 	waitForMessage();
 	int PWM = RxData[0];
 	bool motorOn = RxData[1] == 1;
-	int motorTemp = RxData[2];
+	int motorTemp = RxData[2] - 80;
 	int motorTempF = motorTemp * 9/5 + 32;
 	bool motorTempConnected = motorTemp != 0xFF;
 	int ContTemp = RxData[3];
